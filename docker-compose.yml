@@ -1,0 +1,9 @@
+version: "2"
+services:
+  database:
+    image: "mysql:5.7"
+    environment:
+      - MYSQL_DATABASE=$COMPOSE_PROJECT_NAME
+      - MYSQL_ROOT_PASSWORD=root
+    ports:
+      - "3306:3306"
